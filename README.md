@@ -164,15 +164,17 @@ Model performance was assessed using:
 | Random Forest      | 8.515 | 0.876 |
 
 ### Results Summary
-- Linear Regression captured overall trends in life expectancy but relied on linear assumptions.
-- Random Forest captured non-linear relationships among variables, yielding competitive predictive performance.
-- **HDI emerged as the most influential predictor of life expectancy**, followed by GII and GDP, while CO₂ emissions showed the weakest contribution.  
-  *(This conclusion is based on the Random Forest feature importance analysis, where HDI had the highest importance score.)*
+- The Linear Regression model achieved a slightly higher R² score, indicating strong overall explanatory power under linear assumptions.
+- The Random Forest model performed competitively and was particularly useful for capturing potential non-linear relationships between variables.
+- Feature importance analysis from the Random Forest model showed that **HDI** was the most influential predictor of life expectancy, followed by **GDP**.
+- CO₂ emissions and Gender Inequality Index (GII) contributed less to predictive performance compared to economic and social development indicators.
 
 ### Interpretation
-The machine learning results reinforce the statistical findings of the project. Life expectancy is strongly associated with economic and social development indicators, while environmental indicators alone are insufficient to explain development outcomes.
+The machine learning results are consistent with the earlier correlation analysis.  
+Life expectancy is primarily driven by social and economic development factors, especially HDI and GDP.  
+While environmental indicators such as CO₂ emissions are relevant at a macro level, they do not independently explain cross-country differences in life expectancy.
 
-Overall, this section complements the correlation analysis by demonstrating predictive relationships between development indicators.
+Overall, the machine learning analysis complements the hypothesis testing results by providing predictive evidence that human development outcomes are more closely associated with economic and social indicators than with environmental pressure alone.
 
 ---
 
@@ -183,7 +185,6 @@ Overall, this section complements the correlation analysis by demonstrating pred
 - **Version Control:** GitHub  
 
 ---
-
 
 ## Ethical & AI Statement
 All data sources are public and properly cited.  
