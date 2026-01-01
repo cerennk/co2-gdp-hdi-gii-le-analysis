@@ -123,6 +123,58 @@ The analysis is supported by the following visualizations:
   - Choropleth map of CO₂ emissions, HDI, GDP, Life Expectancy and GII (2019)
     
 ---
+## Machine Learning Analysis
+
+In addition to correlation-based hypothesis testing, basic machine learning models were applied to examine whether key development indicators can predict human development outcomes.
+
+The analysis was conducted using the **clean 2019 cross-sectional dataset**, ensuring consistency with the hypothesis testing framework.
+
+### Target Variable
+**Life Expectancy** was selected as the target variable, as it represents a core outcome of human development and aligns directly with the project’s motivation.
+
+### Features
+The following variables were used as predictors:
+- CO₂ emissions (total)
+- GDP
+- Human Development Index (HDI)
+- Gender Inequality Index (GII)
+
+### Models Applied
+Two supervised regression models were implemented:
+- Linear Regression
+- Random Forest Regressor
+
+### Train–Test Split
+The dataset was split into:
+- **80% training data**
+- **20% testing data**
+
+This split was used to evaluate model performance on unseen data.
+
+### Evaluation Metrics
+Model performance was assessed using:
+- Mean Squared Error (MSE)
+- R² Score (coefficient of determination)
+
+### Model Performance Results (2019 Cross-Section)
+
+| Model              | MSE  | R² Score |
+|--------------------|------|----------|
+| Linear Regression  | 7.387 | 0.892 |
+| Random Forest      | 8.515 | 0.876 |
+
+### Results Summary
+- Linear Regression captured overall trends in life expectancy but relied on linear assumptions.
+- Random Forest captured non-linear relationships among variables, yielding competitive predictive performance.
+- **HDI emerged as the most influential predictor of life expectancy**, followed by GII and GDP, while CO₂ emissions showed the weakest contribution.  
+  *(This conclusion is based on the Random Forest feature importance analysis, where HDI had the highest importance score.)*
+
+### Interpretation
+The machine learning results reinforce the statistical findings of the project. Life expectancy is strongly associated with economic and social development indicators, while environmental indicators alone are insufficient to explain development outcomes.
+
+Overall, this section complements the correlation analysis by demonstrating predictive relationships between development indicators.
+
+---
 
 ## Tools & Environment
 - **Language:** Python  
@@ -131,6 +183,7 @@ The analysis is supported by the following visualizations:
 - **Version Control:** GitHub  
 
 ---
+
 
 ## Ethical & AI Statement
 All data sources are public and properly cited.  
